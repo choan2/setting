@@ -53,15 +53,15 @@ module.exports = function(grunt) {
 			}
 		},
 		imagemin: {
-				static: {
-					options: {
-						optimizationLevel: 7
-					}
-				},
-				dynamic: {
-					files: [{
-						expand: true,
-						cwd: 'source/',
+			static: {
+				options: {
+					optimizationLevel: 7
+				}
+			},
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'source/',
 					src: ['**/*.{png,jpg,gif}'],
 					dest: 'dist/'
 				}]
@@ -79,6 +79,13 @@ module.exports = function(grunt) {
 			less:{
 				files: ['source/less/*.less'],
 				tasks: ['less', 'cssmin']
+			},
+			images: {
+				files: ['source/**/*.{png,jpg,gif}'],
+				tasks: ['imagemin:dynamic'],
+				options: {
+					spawn: false,
+				}
 			}
 		}
 	});
