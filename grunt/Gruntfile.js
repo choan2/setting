@@ -53,11 +53,11 @@ module.exports = function(grunt) {
 			}
 		},
 		imagemin: {
-			static: {
+			/*static: {
 				options: {
 					optimizationLevel: 7
 				}
-			},
+			},*/
 			dynamic: {
 				files: [{
 					expand: true,
@@ -74,19 +74,34 @@ module.exports = function(grunt) {
 			},*/
 			js:{
 				files: ['source/js/*.js'],
-				tasks: ['concat:js', 'uglify']
+				tasks: ['concat:js', 'uglify'],
+				options: {
+        			// Start another live reload server on port 3000
+        			livereload: true
+      			}
 			},
 			less:{
 				files: ['source/less/*.less'],
-				tasks: ['less', 'cssmin']
+				tasks: ['less', 'cssmin'],
+				options: {
+        			// Start another live reload server on port 3000
+        			livereload: true
+      			}
 			},
 			images: {
 				files: ['source/**/*.{png,jpg,gif}'],
 				tasks: ['imagemin:dynamic'],
 				options: {
 					spawn: false,
+					livereload: true
 				}
-			}
+			}//,			
+	        //html: {
+	          //  files: ['**/*.html'],
+	           // options: {
+	            //    livereload: true
+	            //}
+	        //}
 		}
 	});
 
