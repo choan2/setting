@@ -1,7 +1,7 @@
 
 ##라이브코딩 방법
 
-''module.exports = function(grunt) {
+'' module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		 pkg: grunt.file.readJSON('package.json'),
@@ -51,6 +51,8 @@
 
 };
 
-#<script src="//localhost:35729/livereload.js"></script> 기본포트는 35729이다
+
+
+## <script src="//localhost:35729/livereload.js"></script> 기본포트는 35729이다
 
 
