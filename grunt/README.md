@@ -56,5 +56,20 @@ module.exports = function(grunt) {
 ```js
 <script src="//localhost:35729/livereload.js"></script> //기본포트는 35729이다
 ```
+##packge
 
+
+```js
+{
+	"name": "test",
+	"version": "0.1.0",
+	"devDependencies": {
+		"grunt": "*",
+        "matchdep": "*",
+        "grunt-express": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-open": "*"
+	}
+}
+```
 
