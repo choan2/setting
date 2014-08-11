@@ -1,5 +1,5 @@
 
-##라이브코딩 방법
+##라이브코딩 서버새팅하고 간단하게 하는방법
 
 ```js
 module.exports = function(grunt) {
@@ -52,6 +52,9 @@ module.exports = function(grunt) {
 
 };
 ```
-#<script src="//localhost:35729/livereload.js"></script> 기본포트는 35729이다
+
+```js
+<script src="//localhost:35729/livereload.js"></script> //기본포트는 35729이다
+```
 
 
